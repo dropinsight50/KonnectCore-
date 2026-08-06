@@ -1,0 +1,19 @@
+# KonnectCore landing page — Netlify deploy config
+# Push index.html + netlify.toml to GitHub, connect the repo in Netlify, done.
+
+[build]
+  publish = "."        # static site, no build step
+  command = ""         # nothing to build
+
+# Security + cache headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# After deploying:
+# 1. Netlify dashboard → Forms → "demo-requests" will appear after first deploy
+# 2. Forms → Settings → add email notification so every signup hits your inbox
+# 3. Site settings → change YOUR-DOMAIN placeholder URLs in index.html to your real domain
