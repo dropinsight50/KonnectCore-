@@ -33,7 +33,8 @@
       --ink:#17201c;--muted:#65706b;--line:#dce5e1;--bg:#f7faf8;--white:#fff;
       --shadow:0 24px 60px rgba(18,59,47,.14);--radius:22px;--max:1160px
     }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.container{width:min(calc(100% - 32px),var(--max));margin:auto}.section{padding:88px 0}.alt{background:var(--bg)}h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.03em}h1{font-size:clamp(2.4rem,6vw,4.6rem)}h2{font-size:clamp(2rem,4vw,3.4rem)}p{margin:0}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;color:var(--green2);font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:2px;background:var(--gold)}.intro{max-width:720px;margin-top:18px;color:var(--muted);font-size:1.05rem}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border:1px solid transparent;border-radius:999px;font-weight:850;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{color:#fff;background:var(--green);box-shadow:0 12px 24px rgba(18,59,47,.2)}.secondary{color:var(--green);background:#fff;border-color:var(--line)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.container{width:min(calc(100% - 32px),var(--max));margin:auto}.section{padding:88px 0}.alt{background:var(--bg)}h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.03em}h1{font-size:clamp(2.4rem,6vw,4.6rem)}h2{font-size:clamp(2rem,4vw,3.4rem)}p{margin:0}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;color:var(--green2);font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:2px;background:var(--gold)}.intro{max-width:720px;margin-top:18px;color:var(--muted);font-size:1.05rem}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border:1px solid transparent;border-radius:999px;font-weight:850;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{color:#fff;background:var(--green);box-shadow:0 12px 24px rgba(18,59,47,.2)}.secondary{color:var(--green);background:#fff;border-color:var(--line)}.accent{color:#0b2a21;background:var(--gold);box-shadow:0 12px 24px rgba(215,163,61,.32)}.accent:hover{background:#e2b254}
+    .statband{padding:56px 0;background:var(--bg);border-bottom:1px solid var(--line)}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.stat{padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 24px rgba(18,59,47,.06)}.stat b{display:block;color:var(--green);font-size:2rem;font-weight:950;letter-spacing:-.03em;line-height:1.1}.stat span{display:block;margin-top:7px;color:var(--muted);font-size:.85rem;font-weight:650;line-height:1.45}.stats-note{margin-top:16px;color:#8a948f;font-size:.75rem;font-weight:600}
     /* NEW: WhatsApp button + action note */
     .wa{color:#fff;background:#1faf5e;box-shadow:0 12px 24px rgba(31,175,94,.22)}.actions-note{flex-basis:100%;color:#7a8580;font-size:.8rem;font-weight:600}.tagline{margin-top:16px;color:var(--green2);font-weight:850;font-size:.95rem}.textlink{display:inline-flex;align-items:center;min-height:50px;color:var(--green2);font-weight:800;font-size:.95rem;text-decoration:underline;text-underline-offset:4px}
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;color:var(--green);font-weight:950;letter-spacing:-.03em}.mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--green);color:#fff;box-shadow:0 8px 18px rgba(18,59,47,.22)}.links{display:flex;gap:26px;color:#3d4944;font-size:.92rem;font-weight:750}.links a:hover{color:var(--green2)}.menu{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--green);cursor:pointer}
@@ -44,7 +45,7 @@
     .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.benefit{padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:0 10px 24px rgba(18,59,47,.07)}.icon{width:46px;height:46px;display:grid;place-items:center;margin-bottom:17px;border-radius:14px;background:var(--green3);color:var(--green2);font-weight:900}.benefit p{margin-top:9px;color:var(--muted);font-size:.91rem}
     .tabs-wrap{margin-top:42px}.tabs{display:flex;gap:10px;flex-wrap:wrap;padding:8px;border:1px solid var(--line);border-radius:16px;background:#fff}.tab{flex:1;min-width:130px;padding:12px 14px;border:0;border-radius:11px;background:transparent;color:#47534d;font-weight:800;cursor:pointer}.tab.active{color:#fff;background:var(--green)}.feature-panel{display:none;grid-template-columns:.95fr 1.05fr;align-items:center;gap:48px;margin-top:28px;padding:28px;border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:var(--shadow)}.feature-panel.active{display:grid}.feature-copy p{margin-top:14px;color:var(--muted)}.points{display:grid;gap:10px;margin-top:20px}.points span{display:flex;align-items:center;gap:9px;color:#43514b;font-weight:700}.points span:before{content:"✓";width:21px;height:21px;display:grid;place-items:center;border-radius:50%;background:var(--green2);color:#fff;font-size:.68rem}.ui{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#f5f8f6}.uihead{min-height:52px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fff}.uihead b{display:block;font-size:.76rem}.uihead small{display:block;color:#7d8782;font-size:.56rem}.uib{padding:14px}.profile{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid #e1e8e5;border-radius:11px;background:#fff}.ava{width:52px;height:52px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--green2),#4e9b7f);color:#fff;font-weight:900}.profile b{display:block;font-size:.72rem}.profile small{color:#7d8782;font-size:.52rem}.status{margin-left:auto;padding:5px 8px;border-radius:999px;background:#e9f5ef;color:#176a49;font-size:.48rem;font-weight:900}.info{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:9px}.box{padding:11px;border:1px solid #e3e9e6;border-radius:9px;background:#fff}.box span{color:#89938e;font-size:.48rem}.box b{display:block;margin-top:3px;font-size:.59rem}.table{width:100%;margin-top:9px;border-collapse:collapse;border:1px solid #e3e9e6;background:#fff;font-size:.51rem}.table th,.table td{padding:8px 7px;text-align:left;border-bottom:1px solid #edf1ef}.table th{background:#f8faf9;color:#6d7772}.pos{color:#176a49;font-weight:900}.strips{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:9px}.strip{padding:11px;border-radius:9px;background:var(--green);color:#fff}.strip:nth-child(2){background:#f7ead0;color:var(--green)}.strip:nth-child(3){background:#eaf0ed;color:#2f3b36}.strip small{display:block;font-size:.47rem;opacity:.8}.strip b{display:block;margin-top:3px;font-size:.64rem}.formmock{display:grid;grid-template-columns:1fr 1fr;gap:9px}.fm{display:grid;gap:4px}.fm.full{grid-column:1/-1}.fm label{color:#65706b;font-size:.5rem;font-weight:800}.fake{padding:8px 9px;border:1px solid #dfe7e3;border-radius:7px;background:#fff;font-size:.54rem}.loan{display:grid;grid-template-columns:1fr 1fr;gap:9px}.progress{height:8px;margin-top:7px;overflow:hidden;border-radius:999px;background:#e6ece9}.progress i{display:block;width:60%;height:100%;background:var(--green2)}
     /* NEW: mid-page CTA band */
-    .midcta{margin-top:56px;padding:34px;border-radius:26px;background:radial-gradient(circle at 90% 10%,rgba(215,163,61,.22),transparent 30%),var(--green);color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--shadow)}.midcta h3{font-size:clamp(1.3rem,2.4vw,1.8rem)}.midcta p{margin-top:8px;color:#cfe2da;font-size:.95rem}
+    .midcta{margin-top:56px;padding:34px;border-radius:26px;background:radial-gradient(circle at 90% 10%,rgba(215,163,61,.22),transparent 30%),var(--green);color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--shadow)}.midcta h3{font-size:clamp(1.3rem,2.4vw,1.8rem)}.midcta p{margin-top:8px;color:#cfe2da;font-size:.95rem}.midcta .eyebrow{margin-bottom:10px;color:#e8c883}.midcta .eyebrow:before{background:#e8c883}
     .cta{background:radial-gradient(circle at 86% 12%,rgba(215,163,61,.24),transparent 25%),#0b2a21;color:#fff}.cta-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start}.cta .eyebrow,.cta .intro{color:#d8e8e1}.cta-list{display:grid;gap:13px;margin-top:25px}.cta-list div{display:flex;align-items:center;gap:10px;color:#e5efeb;font-weight:700}.cta-list span{width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:#fff;color:var(--green);font-size:.72rem;font-weight:900}.lead{padding:27px;border-radius:23px;background:#fff;color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.22)}.lead p{margin-top:7px;color:var(--muted);font-size:.9rem}.form{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:22px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.8rem;font-weight:800;color:#3f4b45}.field input,.field select,.field textarea{width:100%;min-height:47px;padding:11px 12px;border:1px solid #d9e3df;border-radius:10px;outline:none;background:#fff}.field textarea{min-height:95px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:#79a895;box-shadow:0 0 0 4px rgba(31,102,80,.12)}.consent{grid-column:1/-1;display:flex;gap:9px;align-items:flex-start;color:#56615c;font-size:.78rem}.message{display:none;grid-column:1/-1;padding:11px 13px;border-radius:9px;font-size:.82rem;font-weight:700}.message.ok{display:block;background:#eaf6f0;color:#176a49;border:1px solid #bfdfd0}.message.err{display:block;background:#fff0f0;color:#a12c2c;border:1px solid #efc1c1}.submit{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:14px}.submit small{color:#7a8580}
     /* NEW: waitlist success panel (post-signup upgrade path) */
     .ok{display:none;text-align:center;padding:18px 6px}.lead.success .ok{display:block}.lead.success form{display:none}.ok .tick{width:64px;height:64px;margin:0 auto 16px;display:grid;place-items:center;border-radius:50%;background:var(--green3);color:var(--green2);font-size:1.7rem}.ok h3{font-size:1.5rem}.ok>p{max-width:420px;margin:10px auto 0}.ok-actions{display:grid;gap:12px;max-width:360px;margin:24px auto 0}.ok-actions .btn{width:100%}.ok small{display:block;margin-top:14px;color:#8a948f}
@@ -56,7 +57,7 @@
     .final{text-align:center}.final h2{max-width:760px;margin:0 auto}.final .intro{margin-left:auto;margin-right:auto}.final .actions{justify-content:center}
     footer{padding:34px 0;background:#081f19;color:#dce8e2}.foot{display:flex;justify-content:space-between;gap:24px;align-items:center}.foot p{max-width:540px;margin-top:9px;color:#9fb4ab;font-size:.84rem}.footlinks{display:flex;gap:18px;flex-wrap:wrap;color:#b9c9c2;font-size:.83rem;font-weight:700}.footlinks a:hover{color:#fff}.copyline{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);color:#7f978d;font-size:.76rem}
     @media(max-width:980px){.hero-grid,.feature-panel,.cta-grid{grid-template-columns:1fr}.benefits,.problems{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:800px){.links,.nav>.btn{display:none}.menu{display:block}.links.open{position:absolute;top:76px;left:16px;right:16px;display:grid;padding:13px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:var(--shadow)}.links.open a{padding:12px}.app{grid-template-columns:90px 1fr}.metrics{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:800px){.links,.nav>.btn{display:none}.menu{display:block}.links.open{position:absolute;top:76px;left:16px;right:16px;display:grid;padding:13px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:var(--shadow)}.links.open a{padding:12px}.app{grid-template-columns:90px 1fr}.metrics{grid-template-columns:repeat(2,1fr)}.statgrid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.section{padding:70px 0}.hero{padding:62px 0 80px}.actions{display:grid}.actions .btn{width:100%}.actions .textlink{justify-content:center}.benefits,.problems,.form{grid-template-columns:1fr}.field.full,.consent,.message,.submit{grid-column:auto}.submit{display:grid}.submit .btn{width:100%}.tabs{display:grid;grid-template-columns:1fr 1fr}.tab{min-width:0}.app{grid-template-columns:1fr}.side{display:none}.panels{grid-template-columns:1fr}.feature-panel{padding:17px}.info,.formmock,.strips,.loan{grid-template-columns:1fr}.foot{align-items:flex-start;flex-direction:column}.founder{grid-template-columns:1fr;text-align:center}.founder .face{margin:0 auto}.midcta{display:grid;text-align:center;justify-items:center}}
   </style>
 </head>
@@ -65,7 +66,7 @@
   <div class="container nav">
     <a class="brand" href="#top"><span class="mark">K</span><span>KonnectCore</span></a>
     <nav class="links" id="links"><a href="#benefits">Benefits</a><a href="#features">Features</a><a href="#faq">FAQ</a><a href="#demo">Book a demo</a></nav>
-    <a class="btn primary" href="#demo">Request a Demo</a>
+    <a class="btn accent" href="#demo">Request a Demo</a>
     <button class="menu" id="menu" aria-label="Open menu">☰</button>
   </div>
 </header>
@@ -79,7 +80,7 @@
       <p>KonnectCore keeps your members, savings, loans and produce records accurate, digital and audit-ready — one simple platform built for agricultural cooperatives and FBOs.</p>
       <p class="tagline">The management platform for farmer organisations — powered by AgriKonnect.</p>
       <div class="actions">
-        <a class="btn primary" href="#demo">Request a Demo</a>
+        <a class="btn accent" href="#demo">Request a Demo</a>
         <a class="btn wa" href="https://wa.me/WHATSAPP_NUMBER?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20KonnectCore%20for%20my%20organisation." target="_blank" rel="noopener">Chat on WhatsApp</a>
         <a class="textlink" href="#features">See how it works →</a>
         <span class="actions-note">Free onboarding for selected organisations · No commitment · We respond within 1 working day</span>
@@ -112,6 +113,19 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Metrics strip — honest programme facts, AgroSahas-style stat cards -->
+<section class="statband">
+  <div class="container">
+    <div class="statgrid">
+      <div class="stat"><b>4</b><span>record types in one system — members, savings, loans and produce</span></div>
+      <div class="stat"><b>1</b><span>officer can run everything — members don't need the app at all</span></div>
+      <div class="stat"><b>GHS 0</b><span>onboarding cost — setup, records digitisation and training for selected organisations</span></div>
+      <div class="stat"><b>24h</b><span>response time — every demo request answered personally within 1 working day</span></div>
+    </div>
+    <p class="stats-note">Onboarding programme commitments — what we offer every selected farmer organisation, not projections.</p>
   </div>
 </section>
 
@@ -185,8 +199,8 @@
 
     <!-- NEW: mid-page conversion path -->
     <div class="midcta">
-      <div><h3>Ready to digitise your organisation's records?</h3><p>Request a demo — the first 20 organisations onboarded keep founding-member pricing for life.</p></div>
-      <a class="btn primary" style="background:#fff;color:var(--green)" href="#demo">Request a Demo</a>
+      <div><span class="eyebrow">Founding-member programme</span><h3>Ready to digitise your organisation's records?</h3><p>Request a demo — the first 20 organisations onboarded keep founding-member pricing for life.</p></div>
+      <a class="btn accent" href="#demo">Request a Demo</a>
     </div>
   </div>
 </section>
@@ -227,7 +241,7 @@
         <div class="field"><label for="f-org">Cooperative / FBO name *</label><input id="f-org" name="organization" required></div>
         <div class="field"><label for="f-members">Approximate members</label><select id="f-members" name="members"><option value="">Select range</option><option>Below 50</option><option>50–100</option><option>101–250</option><option>251–500</option><option>Above 500</option></select></div>
         <div class="message" id="message"></div>
-        <div class="submit"><small>No spam, ever. We respond within 1 working day.</small><button class="btn primary" id="submitBtn" type="submit">Request a Demo</button></div>
+        <div class="submit"><small>No spam, ever. We respond within 1 working day.</small><button class="btn accent" id="submitBtn" type="submit">Request a Demo</button></div>
       </form>
 
       <!-- Post-signup upgrade path -->
@@ -268,7 +282,7 @@
     <h2>Your cooperative's records deserve better than a paper book.</h2>
     <p class="intro">Request your demo today — the first 20 organisations onboarded lock founding-member pricing for life.</p>
     <div class="actions">
-      <a class="btn primary" href="#demo">Request a Demo</a>
+      <a class="btn accent" href="#demo">Request a Demo</a>
       <a class="btn wa" href="https://wa.me/WHATSAPP_NUMBER?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20KonnectCore%20for%20my%20cooperative." target="_blank" rel="noopener">Chat on WhatsApp</a>
     </div>
   </div>
