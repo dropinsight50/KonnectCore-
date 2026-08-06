@@ -229,13 +229,10 @@
       <h3>Request a Demo</h3>
       <p>Takes 20 seconds. We'll show you the platform and discuss onboarding your organisation. Your details are used only to contact you — nothing else.</p>
 
-      <!-- Netlify Forms: submissions appear in Netlify dashboard → Forms → demo-requests.
-           Enable email notifications there. data-netlify-honeypot blocks spam. -->
-      <form class="form" id="leadForm" name="demo-requests" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="demo-requests">
-        <input type="hidden" name="subject" value="New KonnectCore demo request">
-        <input type="hidden" name="source" value="landing_page">
-        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <!-- Supabase: leads insert into public.demo_requests (anon role, RLS insert-only).
+           Manage submissions in the Supabase dashboard -> Table Editor. -->
+      <form class="form" id="leadForm">
+        <p style="display:none" aria-hidden="true"><label>Don't fill this out: <input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="field"><label for="f-name">Your name *</label><input id="f-name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="f-phone">Phone / WhatsApp *</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
         <div class="field"><label for="f-org">Cooperative / FBO name *</label><input id="f-org" name="organization" required></div>
@@ -312,16 +309,21 @@
     tab.classList.add('active');document.getElementById(tab.dataset.tab).classList.add('active');
   }));
 
-  // Netlify Forms AJAX submit — keeps the visitor on-page and shows the
-  // success panel with the WhatsApp/demo upgrade path.
+  // Supabase lead capture — anon publishable key, insert-only via RLS.
+  // These values are public-by-design; the anon role can only INSERT rows.
+  const SB_URL="https://yecfflnpbgblxbdbfbcx.supabase.co",SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InllY2ZmbG5wYmdibHhiZGJmYmN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYwNDcxMjQsImV4cCI6MjEwMTYyMzEyNH0.MR6KH01J2C2I_wR5R2Oa7W8V-U6ryldY74hro_qN834";
   const form=document.getElementById('leadForm'),msg=document.getElementById('message'),
         btn=document.getElementById('submitBtn'),leadBox=document.getElementById('leadBox');
   form.addEventListener('submit',async e=>{
     e.preventDefault();
     if(!form.checkValidity()){form.reportValidity();return}
+    // honeypot: silently fake-success for bots
+    if(document.getElementById('bot-field').value){leadBox.classList.add('success');return}
     btn.disabled=true;btn.textContent='Submitting...';msg.className='message';
+    const fd=new FormData(form);
+    const payload={name:fd.get('name'),phone:fd.get('phone'),organization:fd.get('organization'),members:fd.get('members')||null,source:'landing_page'};
     try{
-      const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()});
+      const r=await fetch(SB_URL+'/rest/v1/demo_requests',{method:'POST',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(payload)});
       if(!r.ok)throw new Error();
       leadBox.classList.add('success'); // show success + upgrade path
     }catch(err){
